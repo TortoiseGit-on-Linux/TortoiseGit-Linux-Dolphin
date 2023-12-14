@@ -1,0 +1,11 @@
+windows_folder=$(winepath -w $2)
+# PATH_TO_TGIT=~/.wine/drive_c/Program\ Files/TortoiseGit/bin
+# PATH_TO_TGIT=/run/media/void/DATA/Ohad/TortoiseGit/bin
+# cd ${windows_folder}
+# kdialog --msgbox "/command:${1} /path:${windows_folder} /PATH_TO_TGIT ${PATH_TO_TGIT} /PWD: ${pwd} /winpath: $(winpath)"
+# wine ${PATH_TO_TGIT}/TortoiseGitProc.exe /command:${1} /path:${windows_folder} #TODO: FIX that this will get only the file name
+# wine ${PATH_TO_TGIT}/TortoiseGitProc.exe /command:${1} #This is for directory commands
+ #TODO:How to use a variable for the path for TG file?
+# wine /run/media/void/DATA/Ohad/TortoiseGit/bin/TortoiseGitProc.exe /command:${1} /path ${windows_folder}
+wine /home/void/.wine/drive_c/Program Files/TortoiseGit/bin/TortoiseGitProc.exe /command:${1} /path ${windows_folder}
+# /path:${windows_folder}

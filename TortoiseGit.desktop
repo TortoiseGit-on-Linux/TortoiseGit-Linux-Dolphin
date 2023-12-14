@@ -1,0 +1,52 @@
+[Desktop Entry]
+Name=Tortoise Git
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=inode/directory;application/octet-stream
+Actions=about;log;fetch;commit;status;settings;clone;delete
+X-KDE-Priority=TopLevel
+X-KDE-Submenu=Tortoise Git
+X-KDE-StartupNotify=false
+Icon=TortoiseGit_logo
+
+[Desktop Action about]
+Name=About
+Icon=TortoiseGit_logo
+Exec=/bin/bash tortoiseGitCmd --help
+
+[Desktop Action fetch]
+Name=Fetch
+Icon=preferences-log
+Exec=/bin/bash tortoiseGitCmd fetch %f
+
+[Desktop Action log]
+Name=Log
+Name[he]=לוג
+Icon=preferences-log
+# Exec=/bin/bash tortoiseGitCmd log
+Exec=wine "/run/media/void/DATA/Ohad/TortoiseGit/bin/TortoiseGitProc.exe /command:log /path:"
+
+[Desktop Action commit]
+Name=Commit
+Icon=video-display
+Exec=/bin/bash tortoiseGitCmd commit %f
+
+[Desktop Action status]
+Name=Status
+Icon=redshift-status-day
+Exec=/bin/bash tortoiseGitCmd repostatus %f
+
+[Desktop Action settings]
+Name=Settings
+Icon=application-x-m4
+Exec=/bin/bash tortoiseGitCmd settings %f
+
+[Desktop Action clone]
+Name=Clone
+Icon=cloud-download
+Exec=/bin/bash tortoiseGitCmd clone %f
+
+[Desktop Action delete]
+Name=Delete
+Icon=application-x-trash
+Exec=/bin/bash tortoiseGitCmd repostatus %f
