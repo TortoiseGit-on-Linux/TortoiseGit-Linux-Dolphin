@@ -1,52 +1,74 @@
 [Desktop Entry]
-Name=Tortoise Git
 Type=Service
 ServiceTypes=KonqPopupMenu/Plugin
 MimeType=inode/directory;application/octet-stream
-Actions=about;log;fetch;commit;status;settings;clone;delete
+Actions=about;log;fetch;commit;status;settings;clone;delete;revisiongraph;pull;push;diff;
 X-KDE-Priority=TopLevel
 X-KDE-Submenu=Tortoise Git
 X-KDE-StartupNotify=false
-Icon=TortoiseGit_logo
+Icon=FB81_TortoiseGitProc.0
 
 [Desktop Action about]
 Name=About
-Icon=TortoiseGit_logo
-Exec=/bin/bash tortoiseGitCmd --help
+Icon=FB81_TortoiseGitProc.0
+Exec=/bin/bash tortoiseGitCmd about
 
 [Desktop Action fetch]
 Name=Fetch
-Icon=preferences-log
+Icon=menuupdate-3
 Exec=/bin/bash tortoiseGitCmd fetch %f
+# Exec=cd %U && wine /home/void/.wine/drive_c/Programs/TortoiseGit/bin/TortoiseGitProc.exe /command:fetch
+# Exec=wine explorer
 
 [Desktop Action log]
 Name=Log
-Name[he]=לוג
+Name[he]=יומן ארועים
 Icon=preferences-log
-# Exec=/bin/bash tortoiseGitCmd log
-Exec=wine "/run/media/void/DATA/Ohad/TortoiseGit/bin/TortoiseGitProc.exe /command:log /path:"
+Exec=/bin/bash tortoiseGitCmd log %f
+# Exec=wine "/run/media/void/DATA/Ohad/TortoiseGit/bin/TortoiseGitProc.exe /command:log /path:"
 
 [Desktop Action commit]
 Name=Commit
-Icon=video-display
+Icon=menucommit-3
+# Icon=video-display
 Exec=/bin/bash tortoiseGitCmd commit %f
 
-[Desktop Action status]
-Name=Status
-Icon=redshift-status-day
+[Desktop Action pull]
+Name=Pull
+Icon=pull1-4
+Exec=/bin/bash tortoiseGitCmd pull %f
+
+[Desktop Action push]
+Name=Push
+Icon=Push-3
+Exec=/bin/bash tortoiseGitCmd push %f
+
+[Desktop Action diff]
+Name=Diff
+Icon=OneWayDiff
 Exec=/bin/bash tortoiseGitCmd repostatus %f
+
+# [Desktop Action status]
+# Name=Status
+# Icon=redshift-status-day
+# Exec=/bin/bash tortoiseGitCmd repostatus %f
 
 [Desktop Action settings]
 Name=Settings
-Icon=application-x-m4
+Icon=menusettings-4
 Exec=/bin/bash tortoiseGitCmd settings %f
 
 [Desktop Action clone]
 Name=Clone
-Icon=cloud-download
+Icon=clone-3
 Exec=/bin/bash tortoiseGitCmd clone %f
 
+[Desktop Action revisiongraph]
+Name=Revision Graph
+Icon=menurevisiongraph-5
+Exec=/bin/bash tortoiseGitCmd revisiongraph %f
+
 [Desktop Action delete]
-Name=Delete
-Icon=application-x-trash
-Exec=/bin/bash tortoiseGitCmd repostatus %f
+Name=Remove (Keep Localy)
+Icon=menuskip-4
+Exec=/bin/bash tortoiseGitCmd remove %f
