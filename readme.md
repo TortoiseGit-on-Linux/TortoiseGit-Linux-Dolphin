@@ -19,7 +19,7 @@ kf5-config --version
 
 
 * Known Issues (Tested on 8.21 but might happen or solved on different versions.) *
-==================
+====================================================================================
 * Problem: When deleting the message asks about a folder and not the file.
 * Solution: the deletion is OK.
 
@@ -27,4 +27,4 @@ kf5-config --version
 * Solution: This can be change to a different color in the settings of TortoiseGit.
 
 * Problem: In case you have the same file name with different casing make sure to pay attention before commiting
-* Solution: Wait for a fix for the issues: https://gitlab.com/tortoisegit/tortoisegit/-/issues/3595
+* Solution: Use command line, Find a way to manipulate files using TG, Wait for a fix for the issues: https://gitlab.com/tortoisegit/tortoisegit/-/issues/3595

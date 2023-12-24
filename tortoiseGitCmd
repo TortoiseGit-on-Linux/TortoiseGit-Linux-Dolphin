@@ -1,3 +1,19 @@
-windows_folder=$(winepath -w $2)
-wine /home/void/.wine/drive_c/Programs/TortoiseGit/bin/TortoiseGitProc.exe -command ${1} -path ${windows_folder}
-
+# echo "first: $1"
+# echo "second: $2"
+# echo "third: $3"
+if [ -z "$1" ]; then
+    echo "you must specify a value before calling this command"
+    kdialog --error "you must specify a value before calling this command"
+elif [ $1 == "compare" ]; then
+    echo "comapre"
+    unixBase=$(winepath -u $2)
+    unixMine=$(winepath -u $3)
+    #TODO: Get the name of the app from the command line in $2
+    #Uncomment the relevant line or add your diff program
+    # bcompare $unixBase $unixMine
+    meld $unixBase $unixMine
+else
+    echo "TG"
+    windows_folder=$(winepath -w $2)
+    wine /home/void/.wine/drive_c/Programs/TortoiseGit/bin/TortoiseGitProc.exe -command ${1} -path ${windows_folder}
+fi
