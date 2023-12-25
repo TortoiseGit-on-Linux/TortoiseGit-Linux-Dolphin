@@ -28,3 +28,7 @@ kf5-config --version
 
 * Problem: In case you have the same file name with different casing make sure to pay attention before commiting
 * Solution: Use command line, Find a way to manipulate files using TG, Wait for a fix for the issues: https://gitlab.com/tortoisegit/tortoisegit/-/issues/3595
+
+TODO:
+=======
+* Add icons in diffeerent sizes?
