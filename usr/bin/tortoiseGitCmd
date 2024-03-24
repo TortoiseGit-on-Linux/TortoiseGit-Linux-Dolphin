@@ -1,7 +1,9 @@
 #!/bin/bash
+# TODO: Fix all the commands to work with bash without the shbang so it will be more portable
 # echo "first: $1"
 # echo "second: $2"
 # echo "third: $3"
+echo SUCCESS
 wineInstalled() {
     command=$(which winetricks)
     return $(echo $?)
@@ -29,5 +31,8 @@ elif [ "$1" == "compare" ]; then
 else
     echo "TG"
     windows_folder=$(winepath -w $2)
-    wine ~/.wine/drive_c/Program\ Files/TortoiseGit/bin/TortoiseGitProc.exe -command $1 -path $windows_folder
+# TODO: Create a config file and take everything that is user specific out to there
+    export tortoise_git_location=/home/void/.wine/drive_c/Program\ Files/TortoiseGit/bin/TortoiseGitProc.exe
+    wine "${tortoise_git_location}" -command $1 -path ${windows_folder}
 fi
+

@@ -15,11 +15,25 @@ kf5-config --version
     Package: /usr/local/bin
 * tortoisegit diff tool
 * In order to define the diff tool You need to put the following command in the external tool of tortoisegit:
-   ## wineconsole start /unix /bin/bash /home/lior/bcomp.sh %base %mine ##
+   ## wineconsole start /unix /bin/bash tortoiseGitCmd compare %base %mine ##
 
+
+Q&A
+=======
+* Q: Can I use portable git?
+* A: Yes
+
+* Q: Can I use a portable tortoisegit?
+* A: Yes
 
 * Known Issues (Tested on 8.21 but might happen or solved on different versions.) *
 ====================================================================================
+* Problem: Installing Tortoisegit doesn't continue when pressing the install button
+* Solution: Install wine32bit
+
+* Problem: The installation of git hangs at the end
+* Solution: terminate the process and just make sure it is installed
+
 * Problem: When deleting the message asks about a folder and not the file.
 * Solution: the deletion is OK.
 
@@ -29,6 +43,10 @@ kf5-config --version
 * Problem: In case you have the same file name with different casing make sure to pay attention before commiting
 * Solution: Use command line, Find a way to manipulate files using TG, Wait for a fix for the issues: https://gitlab.com/tortoisegit/tortoisegit/-/issues/3595
 
+* Problem: Delete branch isn't working in revision graph. The menu closes when hovering above it.
+* Solution: Needs investegation so you are welcome to help. In the meantime it is possible to use the terminal. git branch --delete <branchname>, git push origin --delete old-branch
+
 TODO:
 =======
 * Add icons in diffeerent sizes?
+* Add man page - https://www.cyberciti.biz/faq/linux-unix-creating-a-manpage/
