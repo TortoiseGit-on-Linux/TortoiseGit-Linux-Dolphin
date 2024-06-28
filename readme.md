@@ -1,23 +1,26 @@
-tortoiseGit for KDE
+TortoiseGit for KDE
 --------------------
-* Commands that can be added: https://tortoisegit.org/docs/tortoisegit/tgit-automation.html
-* KDE tortoise git support with Dolphin - https://develop.kde.org/docs/apps/dolphin/service-menus/
-* The icon should be placed in /usr/share/icons/breeze/apps/48/
-* Place tortoiseLog.desktop in one of the following and give execute permission <sup id="a1">[1](#f1)</sup>  
-    ~/.local/share/kio/servicemenus  
-    /usr/share/kio/servicemenus  
-  **Prior to kde 5.85:**  
-    /home/<user>/.local/share/kservices5/
-* If you need to check what kde version you have type:
-kf5-config --version
-* Place rungitcmd.sh in one of the follwing location and give it execute permission:
-    Personal use: ~/.local/bin
-    Package: /usr/local/bin
-* tortoisegit diff tool
-* In order to define the diff tool You need to put the following command in the external tool of tortoisegit:
-   ## wineconsole start /unix /bin/bash tortoiseGitCmd compare %base %mine ##
+Features
+=========
+* All tortoise git commands (Please open a bug if something is mising or not working correctlly)
+* Configure your perffred diff tool
 * Tested on KDE5 and KDE6 with tortoiseGit 2.x
 
+Install:
+=========
+1. Place tortoiseLog.desktop in one of the following and give execute permission <sup id="a2">[2](#f2)</sup>  
+    _~/.local/share/kio/servicemenus_  
+    _/usr/share/kio/servicemenus_  
+  **Prior to kde 5.85:**  
+    _/home/<user>/.local/share/kservices5/_
+2. If you need to check what kde version you have type: ```kf5-config --version```
+3. The icons should be placed in /usr/share/icons/breeze/apps/48/
+4. Place _rungitcmd.sh_ in one of the follwing location and give it execute permission:
+    Personal use: _~/.local/bin_
+    Package: _/usr/local/bin_
+5. tortoisegit diff tool
+    In order to define the diff tool You need to put the following command in the external tool of tortoisegit:
+   ## wineconsole start /unix /bin/bash tortoiseGitCmd compare %base %mine ##
 
 Q&A
 =======
@@ -32,6 +35,9 @@ Q&A
 
 * **Q:** I still don't see icons. Now what?
 * A: Open a bug and provide the names of the icons that were created on your system with full path. Please also provide the Linux and KDE version.
+
+* **Q:** How does this work?
+* A: Dolpinh file manager has support for adding custom context menu<sup id="a1">[1](#f1)</sup>. I only created a script file that runs the relevant commands from that context menu. In order for the command to work [WINE](https://www.winehq.org) should be present on the system.
 
 * Known Issues (Tested on 8.21 but might happen or solved on different versions.) *
 ====================================================================================
@@ -57,6 +63,9 @@ TODO:
 =======
 * Add icons in diffeerent sizes?
 * Add man page - https://www.cyberciti.biz/faq/linux-unix-creating-a-manpage/
+* Commands that can be added: https://tortoisegit.org/docs/tortoisegit/tgit-automation.html
 
 #### Footnotes
-> <sup id="f1">1</sup> https://develop.kde.org/docs/apps/dolphin/service-menus/ [⏎](#a1)
+> <sup id="f1">1</sup> [https://develop.kde.org/docs/apps/dolphin/service-menus/](https://develop.kde.org/docs/apps/dolphin/service-menus/) [⏎](#a1) 
+
+> <sup id="f2">2</sup> https://develop.kde.org/docs/apps/dolphin/service-menus/ [⏎](#a2)
