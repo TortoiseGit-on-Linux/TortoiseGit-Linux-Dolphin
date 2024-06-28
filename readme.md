@@ -26,6 +26,12 @@ Q&A
 * Q: Can I use a portable tortoisegit?
 * A: Yes
 
+* Q: I don't see icons. What can I do?
+* A: Install tortoiseGit for windows and it should be fixed or create icons with the right names(look in the desktop file) and put them in the right place.
+
+* Q: I still don't see icons. Now what?
+* A: Open a bug and provide the names of the icons that were created on your system with full path. Please also provide the Linux and KDE version.
+
 * Known Issues (Tested on 8.21 but might happen or solved on different versions.) *
 ====================================================================================
 * Problem: Installing Tortoisegit doesn't continue when pressing the install button
