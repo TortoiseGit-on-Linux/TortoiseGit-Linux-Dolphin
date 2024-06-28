@@ -20,7 +20,7 @@ Install:
     Package: _/usr/local/bin_
 5. tortoisegit diff tool
     In order to define the diff tool You need to put the following command in the external tool of tortoisegit:
-   ## wineconsole start /unix /bin/bash tortoiseGitCmd compare %base %mine ##
+   ```wineconsole start /unix /bin/bash tortoiseGitCmd compare %base %mine```
 
 Q&A
 =======
@@ -39,7 +39,7 @@ Q&A
 * **Q:** How does this work?
 * A: Dolpinh file manager has support for adding custom context menu<sup id="a1">[1](#f1)</sup>. I only created a script file that runs the relevant commands from that context menu. In order for the command to work [WINE](https://www.winehq.org) should be present on the system.
 
-* Known Issues (Tested on 8.21 but might happen or solved on different versions.) *
+Known Issues (Tested on 8.21 but might happen or solved on different versions.) *
 ====================================================================================
 * **Problem:** Installing Tortoisegit doesn't continue when pressing the install button
 * Solution: Install wine32bit
