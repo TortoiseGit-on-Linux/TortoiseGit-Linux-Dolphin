@@ -32,7 +32,7 @@ else
     echo "TG"
     windows_folder=$(winepath -w $2)
 # TODO: Create a config file and take everything that is user specific out to there
-    export tortoise_git_location=/home/void/.wine/drive_c/Program\ Files/TortoiseGit/bin/TortoiseGitProc.exe
+    export tortoise_git_location="/home/$(whoami)/.wine/drive_c/Program Files/TortoiseGit/bin/TortoiseGitProc.exe"
     wine "${tortoise_git_location}" -command $1 -path ${windows_folder}
 fi
 
